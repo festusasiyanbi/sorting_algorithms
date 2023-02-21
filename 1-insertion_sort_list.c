@@ -11,12 +11,13 @@
 void swap_nodes(listint_t **list, listint_t *nodeA, listint_t *nodeB)
 {
 	listint_t *prevA, *nextB;
+
 	if (nodeA == NULL || nodeB == NULL)
 		return;
 	prevA = nodeA->prev;
 	nextB = nodeB->next;
 	if (prevA) /* check if node A is the head node */
-		prevA->next = nodeB
+		prevA->next = nodeB;
 	if (nextB)
 		nextB->prev = nodeA;
 	nodeA->next = nextB;
